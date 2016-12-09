@@ -1,0 +1,19 @@
+{
+  "name": "gitlab-kanbanize",
+  "version": "1.0.0",
+  "description": "An integration between the Gitlab and the Kanbanize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigowirth/gitlab-kanbanize.git"
+  },
+  "author": "Rodrigo Wirth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigowirth/gitlab-kanbanize/issues"
+  },
+  "homepage": "https://github.com/rodrigowirth/gitlab-kanbanize#readme"
+}
