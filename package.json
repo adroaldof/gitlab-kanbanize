@@ -1,19 +1,54 @@
 {
-  "name": "gitlab-kanbanize",
+  "name": "imperium-api",
   "version": "1.0.0",
-  "description": "An integration between the Gitlab and the Kanbanize",
+  "description": "",
   "main": "index.js",
+  "bin": {
+    "news-service": "service.js"
+  },
   "scripts": {
-    "start": "node ./src/index.js"
+    "dev-seed": "babel-node ./bin/dev-seed",
+    "lint": "node_modules/.bin/esw src/ spec/",
+    "lint:watch": "npm run lint -- --watch",
+    "start": "babel-node ./bin/service",
+    "dev": "supervisor --watch src -- -r 'babel-register' ./bin/service",
+    "test": "No tests"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-destructuring",
+      "transform-es2015-modules-commonjs",
+      "transform-async-to-generator",
+      "transform-object-rest-spread",
+      "transform-export-extensions",
+      "syntax-object-rest-spread"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rodrigowirth/gitlab-kanbanize.git"
+    "url": "git@git.bravi.com.br:glasshouse-imperium/glasshouse-imperium-api.git"
   },
-  "author": "Rodrigo Wirth",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rodrigowirth/gitlab-kanbanize/issues"
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.14.0",
+    "debug": "^2.2.0",
+    "dnscache": "0.0.3",
+    "express": "^4.14.0"
   },
-  "homepage": "https://github.com/rodrigowirth/gitlab-kanbanize#readme"
+  "devDependencies": {
+    "babel-cli": "6.9.0",
+    "babel-eslint": "6.0.4",
+    "babel-plugin-syntax-object-rest-spread": "6.8.0",
+    "babel-plugin-transform-async-to-generator": "6.8.0",
+    "babel-plugin-transform-es2015-destructuring": "6.9.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.8.0",
+    "babel-plugin-transform-export-extensions": "6.8.0",
+    "babel-plugin-transform-object-rest-spread": "6.8.0",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-watch": "^2.1.14",
+    "supervisor": "^0.10.0"
+  }
 }

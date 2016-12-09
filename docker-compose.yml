@@ -1,0 +1,11 @@
+local: &LOCAL
+  image: docker-registry.bravi.com.br/bravi-infra-node-image:6.2.2-onbuild
+  command: npm run dev
+  ports:
+    - 3000
+  environment:
+    VIRTUAL_PORT: 3000
+    VIRTUAL_HOST: gitlab-kanbanize.local.bravi.com.br
+    DEBUG: glasshouse-imperium-api:*
+  volumes:
+    - .:/usr/src/app

@@ -1,1 +1,1 @@
-FROM node:7.2.1-alpine
+FROM docker-registry.bravi.com.br/bravi-infra-node-image:7.2.0-onbuild
