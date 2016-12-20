@@ -1,1 +1,4 @@
-FROM docker-registry.bravi.com.br/bravi-infra-node-image:7.2.0-onbuild
+FROM rodrigowirth/alpine-node:7.2.1-onbuild
+
+COPY . /src
+RUN npm install --unsafe-perm
