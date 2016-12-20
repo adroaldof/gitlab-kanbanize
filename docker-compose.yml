@@ -4,8 +4,11 @@ local: &LOCAL
   ports:
     - 3000
   environment:
+    BOARD_ID:
+    DEBUG: glasshouse-imperium-api:*
+    KANBANIZE_API_KEY:
+    KANBANIZE_URL:
     VIRTUAL_PORT: 3000
     VIRTUAL_HOST: gitlab-kanbanize.local.bravi.com.br
-    DEBUG: glasshouse-imperium-api:*
   volumes:
     - .:/usr/src/app
