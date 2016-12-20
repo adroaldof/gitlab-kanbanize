@@ -1,5 +1,5 @@
 local: &LOCAL
-  image: docker-registry.bravi.com.br/bravi-infra-node-image:6.2.2-onbuild
+  image: rodrigowirth/alpine-node:7.2.1
   command: npm run dev
   ports:
     - 3000
@@ -11,4 +11,4 @@ local: &LOCAL
     VIRTUAL_PORT: 3000
     VIRTUAL_HOST: gitlab-kanbanize.local.bravi.com.br
   volumes:
-    - .:/usr/src/app
+    - .:/src
