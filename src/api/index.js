@@ -25,6 +25,11 @@ export default (app) => {
 
 function buildComment (body) {
   const verb = actions[body.object_attributes.action];
+
+  if (!verb) {
+    throw new Error('Action unknown');
+  }
+
   const user = body.user.name;
   const project = body.object_attributes.target.name;
   const link = body.object_attributes.url;
