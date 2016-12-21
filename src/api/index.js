@@ -34,7 +34,8 @@ function buildComment (body) {
   const project = body.object_attributes.target.name;
   const link = body.object_attributes.url;
 
-  return `Merge request ${verb} by ${user} at the project ${project}<br />http://${link}`;
+  return `Merge request ${verb} by ${user} at the project ${project}<br />
+    <a href="${link}">View Merge Request<a/>`;
 }
 
 const actions = {
