@@ -38,5 +38,9 @@ function buildComment (body) {
 }
 
 const actions = {
+  close: 'closed',
+  merge: 'merged',
   open: 'opened',
+  reopen: 'reopened',
+  update: 'updated',
 }
