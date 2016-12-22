@@ -43,5 +43,4 @@ const actions = {
   merge: 'merged',
   open: 'opened',
   reopen: 'reopened',
-  update: 'updated',
 }
