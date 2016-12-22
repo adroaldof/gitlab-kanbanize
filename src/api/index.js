@@ -31,11 +31,17 @@ function buildComment (body) {
   }
 
   const user = body.user.name;
-  const project = body.object_attributes.target.name;
-  const link = body.object_attributes.url;
+  const userAvatar = body.user.avatar_url;
+  const projectName = body.object_attributes.target.name;
+  const projectUrl = body.object_attributes.target.url;
+  const mergeRequestUrl = body.object_attributes.url;
 
-  return `Merge request ${verb} by ${user} at the project ${project}<br />
-    <a href="${link}">View Merge Request<a/>`;
+  return `
+    <img style="width: 25px; margin-right: 5px" src="${userAvatar}">
+    <a href="${mergeRequestUrl}">Merge Request</a>
+    ${verb} by ${user} at the project
+    <a href="${projectUrl}">${projectName}</a>
+  `;
 }
 
 const actions = {

@@ -4,10 +4,10 @@ local: &LOCAL
   ports:
     - 3000
   environment:
-    BOARD_ID:
+    BOARD_ID: 9
     DEBUG: glasshouse-imperium-api:*
-    KANBANIZE_API_KEY:
-    KANBANIZE_URL:
+    KANBANIZE_API_KEY: GRGAbl7VFvnkfI58fGfWtFIWPxPPDuqqbj1NOp8g
+    KANBANIZE_URL: https://imperium.kanbanize.com/index.php/api/kanbanize/
     VIRTUAL_PORT: 3000
     VIRTUAL_HOST: gitlab-kanbanize.local.bravi.com.br
   volumes:
